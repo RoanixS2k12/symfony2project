@@ -1,3 +1,25 @@
-ep_blog_homepage:
-    pattern:  /hello/{name}
-    defaults: { _controller: EPBlogBundle:Default:index }
+joaniblog_accueil:
+    path: /{page}
+    defaults: {_controller : EPBlogBundle:Blog:index, page = 1 }
+    requirements:
+        page: \d*
+
+joaniblog_voir:
+    path: /article/{id}
+    defaults: {_controller: EPBlogBundle:Blog:voir }
+
+joaniblog_ajouter:
+    path: /ajouter
+    defaults: {_controller: EPBlogBundle:Blog:ajouter }
+
+joaniblog_modifier:
+    path: /modifier/{id}
+    defaults: {_controller: EPBlogBundle:Blog:modifier }
+    requirements:
+        id: \d+
+
+joaniblog_supprimer:
+    path: /supprimer/{id}
+    defaults: {_controller: EPBlogBundle:Blog:supprimer }
+    requirements:
+        id: \d+
