@@ -1,6 +1,6 @@
 joaniblog_accueil:
     path: /{page}
-    defaults: {_controller : EPBlogBundle:Blog:index, page = 1 }
+    defaults: {_controller : EPBlogBundle:Blog:index, page: 1 }
     requirements:
         page: \d*
 
