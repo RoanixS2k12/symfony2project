@@ -1,0 +1,4 @@
+ep_blog:
+    resource: "@EPBlogBundle/Resources/config/routing.yml"
+    prefix:   /
+
